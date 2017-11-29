@@ -5,7 +5,10 @@
 // START OF GAME GENERATE A NUMBER FOR COMPUTER'S PICK 
 
 //generate #computer-pick number
+var compNumber = Math.floor(Math.random() * 120 + 19);
+console.log(compNumber);
 //display #computer-pick number 
+$("#computer-pick").html(compNumber);
 
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR ALL 4 CRYSTALS
