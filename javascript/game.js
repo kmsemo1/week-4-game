@@ -1,4 +1,12 @@
 // VARIABLES
+// User total
+var total = [];
+console.log(total);
+// add total array
+// display total
+$("#result").html(total);
+
+
 // generate a number for #button-1
 var btnOne = Math.floor((Math.random() * 12) +1);
 console.log(btnOne);
@@ -15,14 +23,14 @@ $("#computer-pick").html(compNumber);
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR ALL 4 CRYSTALS
 
-
-$(document).ready(function() {
-
-// assign value of btnOne to #button-1
+$(document).(ready function() {
 // when #button-1 is clicked
+$("#button-1").on(function(){
+    var oneTotal = Math.floor(btnOne);
 
-// add the generated number to #result
 });
+// add the generated number to #result
+
 // generate a number for #button-2
 // when #button-2 is clicked
 // add the generated number to #result
