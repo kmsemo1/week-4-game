@@ -1,11 +1,13 @@
 // VARIABLES
-
+// generate a number for #button-1
+var btnOne = Math.floor((Math.random() * 12) +1);
+console.log(btnOne);
 
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR COMPUTER'S PICK 
 
 //generate #computer-pick number
-var compNumber = Math.floor(Math.random() * 120 + 19);
+var compNumber = Math.floor((Math.random() * 120) + 19);
 console.log(compNumber);
 //display #computer-pick number 
 $("#computer-pick").html(compNumber);
@@ -13,10 +15,14 @@ $("#computer-pick").html(compNumber);
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR ALL 4 CRYSTALS
 
-// generate a number for #button-1
-// when #button-1 is clicked
-// add the generated number to #result
 
+$(document).ready(function() {
+
+// assign value of btnOne to #button-1
+// when #button-1 is clicked
+
+// add the generated number to #result
+});
 // generate a number for #button-2
 // when #button-2 is clicked
 // add the generated number to #result
