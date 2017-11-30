@@ -1,10 +1,13 @@
 // VARIABLES
-
-
-// add total array
-// display total
+// user total
 var total = 0;
 
+
+//generate #computer-pick number
+var compNumber = Math.floor((Math.random() * 120) + 19);
+console.log(compNumber);
+//display #computer-pick number 
+$("#computer-pick").html(compNumber);
 
 // generate a random number for #button-1
 var btnOne = Math.floor((Math.random() * 12) + 1);
@@ -25,12 +28,10 @@ console.log(btnFour);
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR COMPUTER'S PICK 
 $(document).ready(function () {
-    //generate #computer-pick number
-    var compNumber = Math.floor((Math.random() * 120) + 19);
-    console.log(compNumber);
-    //display #computer-pick number 
-    $("#computer-pick").html(compNumber);
-
+    // win total
+    var win = 0;
+    // loss total
+    var loss = 0;
     //====================================================================================================
     // START OF GAME GENERATE A NUMBER FOR ALL 4 CRYSTALS
 
@@ -40,10 +41,10 @@ $(document).ready(function () {
         // add increment result of btnOne into total
         // add the generated number to #result
         total += btnOne;
-
         //display total
         $("#result").html(total);
         console.log(total);
+
     });
 
     // when #button-2 is clicked
@@ -53,6 +54,8 @@ $(document).ready(function () {
         //display total
         $("#result").html(total);
         console.log(total);
+
+        
     });
 
     // when #button-3 is clicked
@@ -62,6 +65,7 @@ $(document).ready(function () {
         //display total
         $("#result").html(total);
         console.log(total);
+       
     });
 
     // when #button-4 is clicked
@@ -71,27 +75,39 @@ $(document).ready(function () {
         //display total
         $("#result").html(total);
         console.log(total);
+       
     });
+
+
 });
 //====================================================================================================
 //END OF GAME
 
+/*
+    // if #result === #computer-pic 
+    if (total === compNumber) {
+        // add +1 to total wins
+        win++;
+        // display number of wins 
+        $("#Win").html("Wins: " + win);
+        // restart user total and compNumber
+    };
 
-// if #result === #computer-pic 
-if (total === compNumber) {
-    // variable for wins
-    
-    // add +1 to total wins
+    // else if #result > #computer-pick
+    if (total < compNumber) {
+        // add +1 to total loss
+        loss++;
+        // display number of  losses
+        $("#Loss").html("Loss: " + loss);
+        // restart user total and compNumber
+    };
+*/
 
-// display "you won" message
-// restart counter for #result
-}
 
 
 
-// else if #result > #computer-pick
-// add +1 to total loss
-// display "you lose" message
-// restart counter for #result
+
+
+
 
 //reset using .empty()
