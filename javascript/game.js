@@ -3,27 +3,26 @@
 var total = 0;
 
 
-//generate #computer-pick number
-var compNumber = Math.floor((Math.random() * 120) + 19);
-console.log(compNumber);
+//generate #computer-pick number range of 19-120
+var compNumber = Math.floor((Math.random() * 111) + 19);
+
 //display #computer-pick number 
 $("#computer-pick").html(compNumber);
 
-// generate a random number for #button-1
+// generate a random number for #button-1 range of 1-12 
 var btnOne = Math.floor((Math.random() * 12) + 1);
-console.log(btnOne);
 
-// generate a random number for #button-2
+// generate a random number for #button-2 range of 1-12
 var btnTwo = Math.floor((Math.random() * 12) + 1);
-console.log(btnTwo);
 
-// generate a random number for #button-3
+// generate a random number for #button-3 range of 1-12
 var btnThree = Math.floor((Math.random() * 12) + 1);
-console.log(btnThree);
 
-// generate a random number for #button-4
+// generate a random number for #button-4 range of 1-12
 var btnFour = Math.floor((Math.random() * 12) + 1);
-console.log(btnFour);
+
+console.log(btnOne, btnTwo, btnThree, btnFour);
+console.log(compNumber);
 
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR COMPUTER'S PICK 
@@ -157,15 +156,6 @@ $(document).ready(function () {
 //====================================================================================================
 //END OF GAME
 
-
-
-
-
-
-
-
-
-
-
-
-//reset using .empty()
+// send alert with "You Won"
+// store number of wins
+//reset using .empty() for all crystal values, total value, and compNumber value
