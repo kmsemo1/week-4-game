@@ -76,17 +76,22 @@ $(document).ready(function () {
 //====================================================================================================
 //END OF GAME
 
-// wait until #result === #computer-pick or #result > #computer-pick
-// generate a new number for #computer-pick
-// restart counter for #result
 
 // if #result === #computer-pic 
-// add +1 to total wins
+if (total === compNumber) {
+    // variable for wins
+    
+    // add +1 to total wins
+
 // display "you won" message
+// restart counter for #result
+}
 
 
-// if #result > #computer-pick
+
+// else if #result > #computer-pick
 // add +1 to total loss
 // display "you lose" message
+// restart counter for #result
 
 //reset using .empty()
