@@ -10,6 +10,10 @@ var total = 0;
 var btnOne = Math.floor((Math.random() * 12) + 1);
 console.log(btnOne);
 
+// generate a number for #button-2
+var btnTwo = Math.floor((Math.random() * 12) + 1);
+console.log(btnTwo);
+
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR COMPUTER'S PICK 
 $(document).ready(function () {
@@ -25,21 +29,23 @@ $(document).ready(function () {
 
     // when #button-1 is clicked
     $("#button-1").on("click", function () {
+        // add increment result of btnOne into total
         // add the generated number to #result
-        var result = btnOne + total;
-        total += result
-        // User total
-        
-        //display total
-        $("#result").html(result)
-        console.log(total);
+        total += btnOne;
 
+        //display total
+        $("#result").html(total);
+        console.log(total);
     });
 
-
-    // generate a number for #button-2
     // when #button-2 is clicked
-    // add the generated number to #result
+    $("#button-2").on("click", function () {
+        // add the generated number to #result
+        total += btnTwo;
+        //display total
+        $("#result").html(total);
+        console.log(total);
+    });
 
     // generate a number for #button-3
     // when #button-3 is clicked
