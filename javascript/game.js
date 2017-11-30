@@ -44,7 +44,25 @@ $(document).ready(function () {
         //display total
         $("#result").html(total);
         console.log(total);
+        if(total >= compNumber){
+        // if #result === #computer-pic 
+        if (total === compNumber) {
+            // add +1 to total wins
+            win++;
+            // display number of wins 
+            $("#Win").html("Wins: " + win);
+            // restart user total and compNumber
+        }
 
+        // else if #result > #computer-pick
+        else if (total > compNumber) {
+            // add +1 to total loss
+            loss++;
+            // display number of  losses
+            $("#Loss").html("Loss: " + loss);
+            // restart user total and compNumber
+        }
+        }
     });
 
     // when #button-2 is clicked
@@ -55,7 +73,25 @@ $(document).ready(function () {
         $("#result").html(total);
         console.log(total);
 
-        
+        if(total >= compNumber){
+            // if #result === #computer-pic 
+            if (total === compNumber) {
+                // add +1 to total wins
+                win++;
+                // display number of wins 
+                $("#Win").html("Wins: " + win);
+                // restart user total and compNumber
+            }
+    
+            // else if #result > #computer-pick
+            else if (total > compNumber) {
+                // add +1 to total loss
+                loss++;
+                // display number of  losses
+                $("#Loss").html("Loss: " + loss);
+                // restart user total and compNumber
+            }
+            }
     });
 
     // when #button-3 is clicked
@@ -65,7 +101,26 @@ $(document).ready(function () {
         //display total
         $("#result").html(total);
         console.log(total);
-       
+
+        if(total >= compNumber){
+            // if #result === #computer-pic 
+            if (total === compNumber) {
+                // add +1 to total wins
+                win++;
+                // display number of wins 
+                $("#Win").html("Wins: " + win);
+                // restart user total and compNumber
+            }
+    
+            // else if #result > #computer-pick
+            else if (total > compNumber) {
+                // add +1 to total loss
+                loss++;
+                // display number of  losses
+                $("#Loss").html("Loss: " + loss);
+                // restart user total and compNumber
+            }
+            }
     });
 
     // when #button-4 is clicked
@@ -75,7 +130,26 @@ $(document).ready(function () {
         //display total
         $("#result").html(total);
         console.log(total);
-       
+
+        if(total >= compNumber){
+            // if #result === #computer-pic 
+            if (total === compNumber) {
+                // add +1 to total wins
+                win++;
+                // display number of wins 
+                $("#Win").html("Wins: " + win);
+                // restart user total and compNumber
+            }
+    
+            // else if #result > #computer-pick
+            else if (total > compNumber) {
+                // add +1 to total loss
+                loss++;
+                // display number of  losses
+                $("#Loss").html("Loss: " + loss);
+                // restart user total and compNumber
+            }
+            }
     });
 
 
@@ -83,25 +157,9 @@ $(document).ready(function () {
 //====================================================================================================
 //END OF GAME
 
-/*
-    // if #result === #computer-pic 
-    if (total === compNumber) {
-        // add +1 to total wins
-        win++;
-        // display number of wins 
-        $("#Win").html("Wins: " + win);
-        // restart user total and compNumber
-    };
 
-    // else if #result > #computer-pick
-    if (total < compNumber) {
-        // add +1 to total loss
-        loss++;
-        // display number of  losses
-        $("#Loss").html("Loss: " + loss);
-        // restart user total and compNumber
-    };
-*/
+
+
 
 
 
