@@ -18,6 +18,10 @@ console.log(btnTwo);
 var btnThree = Math.floor((Math.random() * 12) + 1);
 console.log(btnThree);
 
+// generate a random number for #button-4
+var btnFour = Math.floor((Math.random() * 12) + 1);
+console.log(btnFour);
+
 //====================================================================================================
 // START OF GAME GENERATE A NUMBER FOR COMPUTER'S PICK 
 $(document).ready(function () {
@@ -51,6 +55,7 @@ $(document).ready(function () {
         console.log(total);
     });
 
+    // when #button-3 is clicked
     $("#button-3").on("click", function () {
         // add the generated number to #result
         total += btnThree;
@@ -59,9 +64,14 @@ $(document).ready(function () {
         console.log(total);
     });
 
-    // generate a number for #button-4
     // when #button-4 is clicked
-    // add the generated number to #result
+    $("#button-4").on("click", function () {
+        // add the generated number to #result
+        total += btnFour;
+        //display total
+        $("#result").html(total);
+        console.log(total);
+    });
 });
 //====================================================================================================
 //END OF GAME
