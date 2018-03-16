@@ -8,85 +8,84 @@
   <title>Crystal Game</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
     crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
   <div class="jumbotron">
     <h1 class="text-center">Crystal Game</h1>
-    <h2 class="text-center">Match the computer's number</h2>
-    </br>
-    <div class="text-center">
-      <h4>You will be given a random number at the start of the game.</h4>
-      <h4>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</h4>
-      <h4>You win the game by matching your total score to random number, you lose the game if your total score goes above the
-        random number.</h4>
-      <h4>The value of each crystal is hidden from you until you click on it.</h4>
-      <h4>Each time when the game starts, the game will change the values of each crystal</h4>
-    </div>
+    <h2 class="text-center">Match the computer's number by clicking on the crystals.</h2>
   </div>
 
   <div class="container">
 
     <div class="row">
 
-      <div class="panel panel-default">
+      <div class="panel panel-default col-md-4">
         <div class="panel-heading">
           <h3 class="panel-title">Computer's Number</h3>
         </div>
-
         <!--change h1 to the generated number with a range of 19-120-->
         <div class="panel-body text-center">
-          <h1 id="computer-pick"></h1>
+          <h1 id="target-score"></h1>
         </div>
       </div>
 
-      <div class="panel panel-default">
+      <div class="panel panel-default col-md-4">
         <div class="panel-heading">
           <h3 class="panel-title">Pick your crytals</h3>
         </div>
 
         <!-- value of each button needs to be assigned generated number using the range of 1-12-->
         <div class="panel-body text-center">
-          <button id="button-1" class="btn btn-danger" value="1">
-            <img src=https://upload.wikimedia.org/wikipedia/commons/1/14/Quartz%2C_Tibet.jpg alt="white crystal" width="100px" height="100px">
-          </button>
-          <button id="button-2" class="btn btn-danger" value="2">
-            <img src=https://wallup.net/wp-content/uploads/2016/01/152638-digital_art-abstract-green-crystal-748x468.jpg alt="kryptonite"
-              width="100px" height="100px">
-          </button>
-          <button id="button-3" class="btn btn-danger" value="3">
-            <img src=http://www.marinmineral.com/db_pics/pics/tz488c.jpg alt="ruby" width="100px" height="100px">
-          </button>
-          <button id="button-4" class="btn btn-danger" value="4">
-            <img src=https://i.pinimg.com/736x/d3/e9/8e/d3e98ecac16d5087ba16e62b278455d6--blue-crystals-crystals-minerals.jpg alt="blue diamond"
-              width="100px" height="100px">
-          </button>
+
+          <img class="rocks" id="white" src=https://upload.wikimedia.org/wikipedia/commons/1/14/Quartz%2C_Tibet.jpg alt="white crystal">
+          <img class="rocks" id="red" src=https://wallup.net/wp-content/uploads/2016/01/152638-digital_art-abstract-green-crystal-748x468.jpg
+            alt="kryptonite">
+          </br>
+          <img class="rocks" id="green" src=http://www.marinmineral.com/db_pics/pics/tz488c.jpg alt="ruby">
+          <img class="rocks" id="blue" src=https://i.pinimg.com/736x/d3/e9/8e/d3e98ecac16d5087ba16e62b278455d6--blue-crystals-crystals-minerals.jpg
+            alt="blue diamond">
+
         </div>
       </div>
 
       <!-- User number -->
-      <div class="panel panel-default">
+      <div class="panel panel-default col-md-4">
         <div class="panel-heading">
           <h3 class="panel-title">Your Number</h3>
         </div>
         <div class="panel-body text-center">
-          <h1 id="result"></h1>
-        </div>
-      </div>
-      <!-- Total wins, losses, and message -->
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Games</h3>
-        </div>
-        <div class="panel-body text-center">
-          <h1 id="Win">Wins: </h1>
-        </div>
-        <div class="panel-body text-center">
-          <h1 id="Loss">Loss: </h1>
+          <h1 id="your-score">0</h1>
         </div>
       </div>
     </div>
+
+
+    <!-- Total wins, losses, and message -->
+    <div class="row">
+      <div class="panel panel-default col-md-6">
+        <div class="panel-heading">
+          <h3 class="panel-title">Wins</h3>
+        </div>
+        <div class="panel-body text-center">
+          <h1 id="win-count">0</h1>
+        </div>
+      </div>
+
+      <div class="panel panel-default col-md-6">
+        <div class="panel-heading">
+          <h3 class="panel-title">Losses</h3>
+        </div>
+        <div class="panel-body text-center">
+          <h1 id="loss-count">0</h1>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   </div>
